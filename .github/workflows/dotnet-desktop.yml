@@ -73,10 +73,8 @@ jobs:
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=Release
-      env:
-        Configuration: ${{ matrix.configuration }}
 
     - name: Build
       run: dotnet build $env:Solution_Name
     - name: Publish
-      run: dotnet publish -c Release
+      run: dotnet publish $env:Solution_Name -c Release
