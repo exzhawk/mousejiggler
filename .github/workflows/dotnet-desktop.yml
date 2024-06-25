@@ -78,3 +78,7 @@ jobs:
       run: dotnet build $env:Solution_Name
     - name: Publish
       run: dotnet publish $env:Solution_Name -c Release
+    - name: Archive
+      uses: actions/upload-artifact@v4
+      with:
+        path: MouseJiggler\bin\Release\net7.0-windows\win-x64\publish\*
