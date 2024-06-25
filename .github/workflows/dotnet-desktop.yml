@@ -81,4 +81,4 @@ jobs:
         Configuration: ${{ matrix.configuration }}
 
     - name: Build
-      run: dotnet build
+      run: dotnet build $env:Solution_Name
