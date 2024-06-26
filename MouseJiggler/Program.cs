@@ -110,7 +110,7 @@ namespace ArkaneSystems.MouseJiggler
             optZen.Argument.SetDefaultValue (value: Settings.Default.ZenJiggle);
             rootCommand.AddOption (option: optZen);
 
-            // -s 60 --seconds=60
+            // -s 1800 --seconds=1800
             Option optPeriod = new (aliases: new[] {"--seconds", "-s",},
                                     description: "Set number of seconds for the jiggle interval.");
 
@@ -120,8 +120,8 @@ namespace ArkaneSystems.MouseJiggler
                                                        ? "Period cannot be shorter than 1 second."
                                                        : null);
 
-            optPeriod.AddValidator (validate: p => p.GetValueOrDefault<int> () > 60
-                                                       ? "Period cannot be longer than 60 seconds."
+            optPeriod.AddValidator (validate: p => p.GetValueOrDefault<int> () > 1800
+                                                       ? "Period cannot be longer than 1800 seconds."
                                                        : null);
 
             optPeriod.Argument.SetDefaultValue (value: Settings.Default.JigglePeriod);
