@@ -149,7 +149,7 @@ namespace ArkaneSystems.MouseJiggler
             this.tbPeriod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPeriod.Location = new System.Drawing.Point(4, 62);
-            this.tbPeriod.Maximum = 60;
+            this.tbPeriod.Maximum = 1800;
             this.tbPeriod.Minimum = 1;
             this.tbPeriod.Name = "tbPeriod";
             this.tbPeriod.Size = new System.Drawing.Size(281, 45);
